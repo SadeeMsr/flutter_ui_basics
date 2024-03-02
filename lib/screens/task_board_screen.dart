@@ -45,8 +45,8 @@ class _TaskBoardScreenState extends State<TaskBoardScreen> {
         itemCount: tasks.length,
         itemBuilder: (context, index) {
           return Container(
-            margin: const EdgeInsets.all(15),
-            color: Color.fromARGB(255, 231, 241, 251),
+            margin: const EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 0),
+            color: const Color.fromARGB(255, 231, 241, 251),
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
@@ -88,7 +88,6 @@ class _TaskBoardScreenState extends State<TaskBoardScreen> {
               return AlertDialog(
                 title: const Text('Add Task'),
                 content: TextField(
-                  autofocus: true,
                   onSubmitted: (value) {
                     setState(() {
                       tasks.add(value);
